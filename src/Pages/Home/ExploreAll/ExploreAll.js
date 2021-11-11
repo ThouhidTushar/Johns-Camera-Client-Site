@@ -7,7 +7,7 @@ const ExploreAll = () => {
 	const [exploreAll, setExploreAll] = useState([])
 
 	useEffect(() => {
-		fetch('https://cryptic-woodland-86992.herokuapp.com/products')
+		fetch('/allProducts.json')
 			.then(res => res.json())
 			.then(data => setExploreAll(data))
 	}, [])

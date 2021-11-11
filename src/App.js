@@ -3,10 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './contexts/AuthProvider';
 import AboutUs from './Pages/AboutUs/AboutUs';
-import Appointment from './Pages/Appoinment/Appoinment';
-
 import BuyNow from './Pages/BuyNow/BuyNow/BuyNow';
-import Explore from './Pages/Home/Explore/Explore';
 import ExploreAll from './Pages/Home/ExploreAll/ExploreAll';
 import Home from './Pages/Home/Home/Home';
 import Product from './Pages/Home/Product/Product';
@@ -50,7 +47,7 @@ function App() {
 						</Route>
 
 
-						<PrivateRoute path="/buynow">
+						<PrivateRoute path="/buyNow">
 							<BuyNow></BuyNow>
 						</PrivateRoute>
 

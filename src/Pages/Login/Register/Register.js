@@ -1,66 +1,59 @@
-import React from 'react';
-import { useForm } from 'react-hook-form';
-import { NavLink, useHistory } from 'react-router-dom';
-import useFirebase from '../../../hooks/useFirebase';
-import useAuth from './../../../hooks/useAuth';
+
+import { Alert, CircularProgress } from '@mui/material';
+import React, { useState } from 'react';
+import { Spinner } from 'react-bootstrap';
+import { Link, useHistory } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 
 const Register = () => {
-	const { googleSignIn, handleUserRegister } = useFirebase();
-	const { register, handleSubmit, watch, errors } = useForm();
-	const onSubmit = (data) => {
-		handleUserRegister(data.email, data.password);
-		console.log(data);
+	const [loginData, setLoginData] = useState([]);
+	const history = useHistory();
 
+	const { user, registerUser, isLoading, authError } = useAuth();
 
-		const [loginData, setLoginData] = useState({});
-		const history = useHistory();
-		const { user, registerUser, isLoading, authError } = useAuth();
+	const handleOnBlur = e => {
+		const field = e.target.name;
+		const value = e.target.value;
+		const newLoginData = { ...loginData };
+		newLoginData[field] = value;
+		setLoginData(newLoginData);
+	}
 
-		const handleOnBlur = e => {
-			const field = e.target.name;
-			const value = e.target.value;
-			const newLoginData = { ...loginData };
-			newLoginData[field] = value;
-			setLoginData(newLoginData);
+	const handleLoginSubmit = e => {
+		if (loginData.password !== loginData.password2) {
+			alert('Your password did not match');
+			return;
 		}
-		const handleLoginSubmit = e => {
-			if (loginData.password !== loginData.password2) {
-				alert('Your password did not match');
-				return
-			}
-			registerUser(loginData.email, loginData.password, loginData.name, history);
-			e.preventDefault();
-		}
-		return (
-			<div>
-				<form onSubmit={handleSubmit(onSubmit)}>
-					<input
-						className="input-field"
-						name="email"
-						placeholder="Email"
-						type="email"
-						{...register("email", { required: true })}
-					/>
-					<br />
-					<input
-						className="input-field"
-						name="password"
-						type="password"
-						placeholder="Password"
-						{...register("password", { required: true })}
-					/>
-					<br />
+		registerUser(loginData.email, loginData.password, loginData.name, history);
+		e.preventDefault();
+	}
+	return (
+		<div>
+			<h2>Register</h2>
+			{!isLoading && <form onSubmit={handleLoginSubmit}>
+				<input name="name" onBlur={handleOnBlur} type="text" placeholder="Your Name" />
+				<br />
+				<br />
+				<input name="email" onBlur={handleOnBlur} type="email" placeholder="Your Email" />
+				<br />
+				<br />
+				<input name="password" onBlur={handleOnBlur} type="password" placeholder="Your Password" />
+				<br />
+				<br />
+				<input name="password2" onBlur={handleOnBlur} type="password" placeholder="Retype Your Password" />
+				<br />
+				<br />
+				<button className="btn btn-warning" type="submit">Register</button>
+				<p> <h4>Already Registered?</h4>  <Link style={{ textDecoration: "none" }} to="login"><h4>Please Login</h4></Link> </p>
 
-					<input
-						className="submit-btn btn btn-danger mt-3"
-						type="submit"
-						value="Register"
-					/>
-				</form>
+			</form>}
+			{isLoading && <CircularProgress />}
 
-			</div>
-		);
-	};
+			{user?.email && <Alert severity="success">Account Created Successfully !</Alert>}
+			{authError && <Alert severity="error">{authError}</Alert>}
 
+		</div>
+	);
+};
 
-	export default Register;
+export default Register;

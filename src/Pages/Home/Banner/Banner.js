@@ -1,9 +1,9 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import banner1 from '../../../images/Banner/banner (1).jpg'
+import banner1 from '../../../images/Banner/bannar (5).jpg'
 import banner2 from '../../../images/Banner/banner (2).jpg'
 import banner3 from '../../../images/Banner/banner (3).jpg'
-import banner4 from '../../../images/Banner/banner (4).jpg'
+import banner4 from '../../../images/Banner/banner (1).jpg'
 
 
 const Banner = () => {
@@ -17,7 +17,7 @@ const Banner = () => {
 						alt="First slide"
 					/>
 					<Carousel.Caption>
-						<h1>Olympus is love</h1>
+						<h1>The A1 Is Loading</h1>
 
 					</Carousel.Caption>
 				</Carousel.Item>
@@ -56,7 +56,7 @@ const Banner = () => {
 					/>
 
 					<Carousel.Caption>
-						<h1>Dont Miss a Chance</h1>
+						<h1>Olympus Is love</h1>
 
 					</Carousel.Caption>
 				</Carousel.Item>

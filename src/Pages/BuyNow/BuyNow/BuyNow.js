@@ -13,7 +13,7 @@ const BuyNow = ({ }) => {
 	return (
 		<div>
 
-			<Products></Products>
+
 
 			<div>
 				<h1>Buy Now</h1>
