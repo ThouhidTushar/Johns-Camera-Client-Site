@@ -13,9 +13,10 @@ const Product = (props) => {
 				<h5>Price : ${price}</h5>
 				<p>{description}</p>
 			</div>
-			<Link to={`/BuyNow/${ id }`}>
+			<Link to={`/buyNow/${ product._id }`}>
 				<button className="btn btn-primary mb-3">Buy {name}</button>
 			</Link>
+
 		</div>
 
 	);

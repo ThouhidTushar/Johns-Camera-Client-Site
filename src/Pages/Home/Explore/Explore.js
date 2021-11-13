@@ -14,7 +14,7 @@ const Explore = (props) => {
 				<p>{description}</p>
 			</div>
 
-			<Link to={`/BuyNow/${ id }`}>
+			<Link to={`/buyNow/${ explore._id }`}>
 				<button className="btn btn-primary mb-3">Buy {name}</button>
 			</Link>
 		</div>

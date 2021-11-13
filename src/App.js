@@ -4,6 +4,7 @@ import './App.css';
 import AuthProvider from './contexts/AuthProvider';
 import AboutUs from './Pages/AboutUs/AboutUs';
 import BuyNow from './Pages/BuyNow/BuyNow/BuyNow';
+import Review from './Pages/Dashboard/Review/Review';
 
 import ExploreAll from './Pages/Home/ExploreAll/ExploreAll';
 import Home from './Pages/Home/Home/Home';
@@ -42,21 +43,18 @@ function App() {
 						<Route path="/product">
 							<Product></Product>
 						</Route>
-						<Route path="/aboutUs">
-							<AboutUs></AboutUs>
+						<Route path="/review">
+							<Review></Review>
 						</Route>
+
+
+
 
 						<PrivateRoute path="/buyNow">
 							<BuyNow></BuyNow>
 						</PrivateRoute>
 
-						<PrivateRoute path="/dashboard">
-							<BuyNow></BuyNow>
-						</PrivateRoute>
-
-
-
-						<PrivateRoute path="/BuyNow/:productId">
+						<PrivateRoute path="/buyNow/:productId">
 							<BuyNow></BuyNow>
 						</PrivateRoute>
 

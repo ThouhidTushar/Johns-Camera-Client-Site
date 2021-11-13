@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import Product from '../Product/Product';
 import './Products.css'
 
@@ -24,12 +25,14 @@ const Products = () => {
 					:
 					<div className="product-container mt-5 row">
 						{
-							products.map(product => <Product
-								key={product.id}
-								name={product.name}
-								product={product}
+							products.map(products => <Product
+								key={products.id}
+								name={products.name}
+								product={products}
+
 							></Product>)
 						}
+
 					</div>
 			}
 		</div>
