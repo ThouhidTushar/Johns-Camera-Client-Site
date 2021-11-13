@@ -4,6 +4,7 @@ import './App.css';
 import AuthProvider from './contexts/AuthProvider';
 import AboutUs from './Pages/AboutUs/AboutUs';
 import BuyNow from './Pages/BuyNow/BuyNow/BuyNow';
+import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import Review from './Pages/Dashboard/Review/Review';
 import ExploreAll from './Pages/Home/ExploreAll/ExploreAll';
 import Home from './Pages/Home/Home/Home';
@@ -13,6 +14,7 @@ import ProductDetailss from './Pages/Home/ProductDetailss/ProductDetailss';
 import Login from './Pages/Login/Login/Login';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Register from './Pages/Login/Register/Register';
+import MyOrders from './Pages/MyOrders/MyOrders';
 import NotFound from './Pages/NotFound/NotFound';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
@@ -55,12 +57,15 @@ function App() {
 						</Route>
 
 
-
-
+						<PrivateRoute path="/myOrders">
+							<MyOrders></MyOrders>
+						</PrivateRoute>
 						<PrivateRoute path="/buyNow">
 							<BuyNow></BuyNow>
 						</PrivateRoute>
-
+						<PrivateRoute path="/dashboard">
+							<Dashboard></Dashboard>
+						</PrivateRoute>
 						<PrivateRoute path="/buyNow/:productId">
 							<BuyNow></BuyNow>
 						</PrivateRoute>

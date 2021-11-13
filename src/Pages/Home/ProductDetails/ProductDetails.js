@@ -33,6 +33,15 @@ const ProductDetails = () => {
 	const onSubmit = (data) => {
 		data.email = email;
 		console.log(data);
+
+		fetch("http://localhost:5000/confirmOrder", {
+			method: "POST",
+			headers: { "content-type": "application/json" },
+			body: JSON.stringify(data),
+		})
+			.then((res) => res.json())
+			.then((result) => console.log(result));
+		console.log(data);
 	};
 
 
@@ -68,6 +77,7 @@ const ProductDetails = () => {
 
 							</Card.Body>
 						</Card>
+
 					</div>
 					<div className="col-md-12">
 						<h1>Order Form</h1>
@@ -85,13 +95,7 @@ const ProductDetails = () => {
 								className="p-2 m-2 w-100"
 							/>
 							<br />
-							{/* <input
-								{...register("email", { required: true })}
-								placeholder="Enter Your Email"
-								type="email"
-								className="p-2 m-2 w-100"
-							/>
-							<br /> */}
+
 							<input
 								{...register("comments")}
 								placeholder="comments"
@@ -107,11 +111,7 @@ const ProductDetails = () => {
 								className="p-2 m-2 w-100"
 							/>
 							<br />
-
 							<br />
-
-							<br />
-
 							{errors.exampleRequired && <span>This field is required</span>}
 
 							<input

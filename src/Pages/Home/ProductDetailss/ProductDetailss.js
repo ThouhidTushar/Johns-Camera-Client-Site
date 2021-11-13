@@ -2,6 +2,8 @@ import Button from '@restart/ui/esm/Button';
 import React, { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
+import Home from '../Home/Home';
 
 const ProductDetailss = () => {
 	const { id } = useParams();
@@ -17,6 +19,8 @@ const ProductDetailss = () => {
 
 	return (
 		<div>
+
+
 			<h1>Product Details</h1>
 			<Card className='container' style={{ width: '30rem' }}>
 				<Card.Img variant="top" src={ExactItem[0]?.img} />
@@ -26,17 +30,12 @@ const ProductDetailss = () => {
 					<Card.Text>
 						{ExactItem[0]?.description}
 					</Card.Text>
-					<Button variant="primary" size="lg">
-						Buy Now
+					<Button variant="primary" size="lg ">
+						Oder Now
 					</Button>
+
 				</Card.Body>
 			</Card>
-
-			{/* <h1>this is product details</h1>
-			<h1> Photo : {ExactItem[0]?.img}</h1>
-			<h1> Name : {ExactItem[0]?.name}</h1>
-			<h1> Price : {ExactItem[0]?.price}</h1>
-			<h1> Description : {ExactItem[0]?.description}</h1> */}
 		</div>
 
 	);
