@@ -22,7 +22,6 @@ const useFirebase = () => {
 				const newUser = { email, displayName: name };
 				setUser(newUser)
 				// send name to firebase after creation
-
 				updateProfile(auth.currentUser, {
 					displayName: name
 				}).then(() => {
@@ -46,6 +45,7 @@ const useFirebase = () => {
 				const destination = location?.state?.from || '/';
 				history.replace(destination);
 				setAuthError('');
+				sessionStorage.setItem("email", email);
 			})
 			.catch((error) => {
 				setAuthError(error.message);
@@ -58,7 +58,9 @@ const useFirebase = () => {
 		signInWithPopup(auth, googleProvider)
 			.then((result) => {
 				const user = result.user;
+				setUser(result.user)
 				setAuthError('');
+				sessionStorage.setItem("email", user.email);
 			}).catch((error) => {
 				setAuthError(error.message);
 			}).finally(() => setIsLoading(false));

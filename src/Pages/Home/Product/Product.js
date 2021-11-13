@@ -4,7 +4,7 @@ import './Product.css'
 
 const Product = (props) => {
 	const { product } = props;
-	const { id, name, description, img, price } = product;
+	const { name, description, img, price, _id } = product;
 	return (
 		<div className='product'>
 			<div>
@@ -13,7 +13,7 @@ const Product = (props) => {
 				<h5>Price : ${price}</h5>
 				<p>{description}</p>
 			</div>
-			<Link to={`/buyNow/${ product._id }`}>
+			<Link to={`/productDetails/${ _id }`}>
 				<button className="btn btn-primary mb-3">Buy {name}</button>
 			</Link>
 

@@ -1,33 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import { Card, Button } from 'react-bootstrap';
-import Products from '../../Home/Products/Products';
+import { Link } from 'react-router-dom';
 
 
+const BuyNow = () => {
 
+	// const [product, setProduct] = useState({});
+	// const { id } = useParams();
+	// console.log(id);
 
-const BuyNow = ({ }) => {
-	const { productId } = useParams();
+	// useEffect(() => {
+	// 	fetch(`http://localhost:5000/singleProduct/${ id }`)
+	// 		.then(res => res.json())
+	// 		.then(data => setProduct(data));
+	// }, [])
+	// console.log(product);
+	// return (
+	// 	<div>
+	// 		<div>
+	// 			<h1>Buy Now {product.name}</h1>
+	// 		</div>
 
+	// 	</div>
 
-	return (
-		<div>
-
-
-
-			<div>
-				<h1>Buy Now</h1>
-			</div>
-
-			<div className="row mx-5 d-flex justify-content-center">
-
-
-
-
-			</div>
-		</div>
-
-	);
+	// );
 };
 
 export default BuyNow;

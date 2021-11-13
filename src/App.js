@@ -5,10 +5,11 @@ import AuthProvider from './contexts/AuthProvider';
 import AboutUs from './Pages/AboutUs/AboutUs';
 import BuyNow from './Pages/BuyNow/BuyNow/BuyNow';
 import Review from './Pages/Dashboard/Review/Review';
-
 import ExploreAll from './Pages/Home/ExploreAll/ExploreAll';
 import Home from './Pages/Home/Home/Home';
 import Product from './Pages/Home/Product/Product';
+import ProductDetails from './Pages/Home/ProductDetails/ProductDetails';
+import ProductDetailss from './Pages/Home/ProductDetailss/ProductDetailss';
 import Login from './Pages/Login/Login/Login';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Register from './Pages/Login/Register/Register';
@@ -45,6 +46,12 @@ function App() {
 						</Route>
 						<Route path="/review">
 							<Review></Review>
+						</Route>
+						<Route path="/productDetails/:id">
+							<ProductDetails></ProductDetails>
+						</Route>
+						<Route path="/productDetailss/:id">
+							<ProductDetailss></ProductDetailss>
 						</Route>
 
 

@@ -4,7 +4,7 @@ import './Explore.css'
 
 const Explore = (props) => {
 	const { explore } = props;
-	const { id, name, description, img, price } = explore;
+	const { _id, name, description, img, price } = explore;
 	return (
 		<div className='product'>
 			<div>
@@ -14,7 +14,7 @@ const Explore = (props) => {
 				<p>{description}</p>
 			</div>
 
-			<Link to={`/buyNow/${ explore._id }`}>
+			<Link to={`/productDetailss/${ _id }`}>
 				<button className="btn btn-primary mb-3">Buy {name}</button>
 			</Link>
 		</div>

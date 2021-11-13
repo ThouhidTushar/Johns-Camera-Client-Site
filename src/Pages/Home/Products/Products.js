@@ -26,7 +26,7 @@ const Products = () => {
 					<div className="product-container mt-5 row">
 						{
 							products.map(products => <Product
-								key={products.id}
+								key={products._id}
 								name={products.name}
 								product={products}
 
@@ -35,6 +35,8 @@ const Products = () => {
 
 					</div>
 			}
+
+
 		</div>
 	);
 };
