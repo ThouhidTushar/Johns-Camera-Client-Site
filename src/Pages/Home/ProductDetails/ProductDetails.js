@@ -17,7 +17,7 @@ const ProductDetails = () => {
 
 	const email = sessionStorage.getItem("email");
 	useEffect(() => {
-		fetch(`http://localhost:5000/singleProduct/${ id }`)
+		fetch(`https://protected-plains-36260.herokuapp.com/singleProduct/${ id }`)
 			.then(res => res.json())
 			.then(data => setProduct(data));
 	}, [])
@@ -34,7 +34,7 @@ const ProductDetails = () => {
 		data.email = email;
 		console.log(data);
 
-		fetch("http://localhost:5000/confirmOrder", {
+		fetch("https://protected-plains-36260.herokuapp.com/confirmOrder", {
 			method: "POST",
 			headers: { "content-type": "application/json" },
 			body: JSON.stringify(data),

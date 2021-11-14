@@ -13,7 +13,7 @@ const Review = () => {
 	} = useForm();
 
 	const onSubmit = (data) => {
-		fetch("http://localhost:5000/review", {
+		fetch("https://protected-plains-36260.herokuapp.com/review", {
 			method: "POST",
 			headers: { "content-type": "application/json" },
 			body: JSON.stringify(data),

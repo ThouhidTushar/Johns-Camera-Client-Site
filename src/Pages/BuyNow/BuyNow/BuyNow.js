@@ -10,7 +10,7 @@ const BuyNow = () => {
 	// console.log(id);
 
 	// useEffect(() => {
-	// 	fetch(`http://localhost:5000/singleProduct/${ id }`)
+	// 	fetch(`https://protected-plains-36260.herokuapp.com/singleProduct/${ id }`)
 	// 		.then(res => res.json())
 	// 		.then(data => setProduct(data));
 	// }, [])
