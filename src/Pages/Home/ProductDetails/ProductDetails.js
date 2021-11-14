@@ -20,7 +20,7 @@ const ProductDetails = () => {
 		fetch(`https://protected-plains-36260.herokuapp.com/singleProduct/${ id }`)
 			.then(res => res.json())
 			.then(data => setProduct(data));
-	}, [])
+	}, [id])
 
 
 	const {

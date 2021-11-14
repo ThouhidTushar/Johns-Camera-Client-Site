@@ -7,6 +7,7 @@ import useAuth from "../../../hooks/useAuth";
 import PayNow from "../PayNow/PayNow";
 import ExploreAll from "../../Home/ExploreAll/ExploreAll";
 import AllOrders from "../../Home/AllOrders/AllOrders";
+import AddAdmin from "../../AddAdmin/AddAdmin";
 
 const Dashboard = () => {
 	const [control, setControl] = useState("addServices");
@@ -59,7 +60,7 @@ const Dashboard = () => {
 										<h3>Manage Products</h3>
 									</li>
 									<li
-										onClick={() => setControl("status")}
+										onClick={() => setControl("makeAdmin")}
 										className="admin-menu p-2"
 									>
 										<h3>Make Admin</h3>
@@ -83,6 +84,7 @@ const Dashboard = () => {
 							{control === "allOrders" && <AllOrders></AllOrders>}
 							{control === "addServices" && <Review></Review>}
 							{control === "payNow" && <PayNow></PayNow>}
+							{control === "makeAdmin" && <AddAdmin></AddAdmin>}
 							{control === "manageProducts" && <ExploreAll></ExploreAll>}
 
 							{control === "logOut" && <Button onClick={logout} variant="danger"><h6 className="btn btn-danger ">Logout</h6></Button>}

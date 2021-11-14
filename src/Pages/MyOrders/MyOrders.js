@@ -9,7 +9,7 @@ const MyOrders = () => {
 		fetch(`https://protected-plains-36260.herokuapp.com/myOrders/${ email }`)
 			.then((res) => res.json())
 			.then((data) => setServices(data));
-	}, [control]);
+	}, [email]);
 
 	const handleDelete = (id) => {
 		fetch(`https://protected-plains-36260.herokuapp.com/deleteOrder/${ id }`, {
