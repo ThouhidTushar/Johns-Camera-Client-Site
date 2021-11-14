@@ -1,22 +1,26 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
+
+
 const AboutUs = () => {
 	return (
 		<div className="row mt-5">
 
-			<div className="col-lg-6">
+			<div className="col-lg-6 container">
 				<h1>
-					Your Dream Destination With Us
+					Get to know the people who know your gear best.
 				</h1>
-				<p>
-					<h5>Since 1975, ‘Meta Travels’ has been focused on bringing our customers the best in esteem and quality travel game plans. We are enthusiastic about movement and sharing the world’s marvels on the relaxation travel side, <br /> and giving corporate explorers hello there contact administrations to encourage their business travel needs.
-					</h5>
-					<h5>
-						Our honor-winning organization reliably positions as a standout amongst other offices in the nation (Travel Weekly, Business Travel Weekly), and is the best individual from the renowned Signature Travel Network, <br /> an overall association enabling us to give our clients unmatched advantages.
-					</h5>
+				<h6>Johns Camera is not a big box store, or a faceless chain... or a personality-free zone. Johns Camera is a group of people who are passionate about the things you're passionate about—from photography, film, music and audio to art and technology, creating and imagining.We believe in making customers, not sales. That's why we've perfected the "art of the downsell": we'll always recommend the best options based on your specific needs, rather than the price tag. The customer comes first, second and third at Johns Camera.</h6>
+				<h1>
+					People, not algorithms
+				</h1>
+				<h6>We hire and extensively train our product specialists so that each one can speak from a place of confidence and expertise... which means when you need answers, we're ready with solutions, tailored to you.We believe in making customers, not sales. That's why we've perfected the "art of the downsell": we'll always recommend the best options based on your specific needs, rather than the price tag. The customer comes first, second and third at Johns Camera.</h6>
+				<h1>
+					Principles Over Profits
+				</h1>
+				<h6>We believe in making customers, not sales. That's why we've perfected the "art of the downsell": we'll always recommend the best options based on your specific needs, rather than the price tag. The customer comes first, second and third at Johns Camera.We believe in making customers, not sales. That's why we've perfected the "art of the downsell": we'll always recommend the best options based on your specific needs, rather than the price tag. The customer comes first, second and third at Johns Camera.</h6>
 
-					<h5>
-						Travel magazines (Afar, Travel+Leisure), real inn brands, and that are only the tip of the iceberg. ‘Organization Name’ is a Premium Member of ASTA (American Society of Travel Advisors), <br /> and also an ASTA Green Member office, and CLIA (Cruise Line International Association).</h5></p>
+
 			</div>
 
 			<div className="col-md-5 mx-5">
@@ -25,7 +29,7 @@ const AboutUs = () => {
 						<Carousel.Item>
 							<img
 								className="w-100"
-								src="https://i.ibb.co/FK40cN6/girl-jumping-for-joy-3849870-640.jpg"
+								src="https://i.ibb.co/jfhSpS1/nordwood-themes-F3-Dde-9thd8-unsplash.jpg"
 								alt="First slide"
 							/>
 
@@ -33,14 +37,14 @@ const AboutUs = () => {
 						<Carousel.Item>
 							<img
 								className="w-100"
-								src="https://i.ibb.co/x7wQN0t/person-692406-640.jpg"
+								src="https://i.ibb.co/rMfv072/james-feaver-cv3wn-Erx7w-unsplash.jpg"
 								alt="Second slide"
 							/>
 						</Carousel.Item>
 						<Carousel.Item>
 							<img
 								className="w-100"
-								src="https://i.ibb.co/KqVqW5y/freedom-4782870-640.jpg"
+								src="https://i.ibb.co/FmmxLcn/theregisti-HSXIp58y-Py-I-unsplash.jpg"
 								alt="Third slide"
 							/>
 						</Carousel.Item>

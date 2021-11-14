@@ -3,7 +3,7 @@ import logo from "./../../../images/Banner/shoplogo.png"
 
 const Footer = () => {
 	return (
-		<div className="bg-secondary text-light container-fluid">
+		<div className="bg-light text-dark container-fluid">
 			<div className="mt-5 footer">
 				<div className="">
 					<div className="row">
@@ -21,34 +21,34 @@ const Footer = () => {
 								<p className="mt-4">Owner</p>
 								<p className="mt-4">Destinations</p>
 								<p className="mt-4">Who We Are</p>
-								<p className="mt-4">Around The World</p>
+								<p className="mt-4">Cameras</p>
 							</div>
 						</div>
 						<div className="col-md-3">
 							<div className="third-part mt-4">
-								<h1>Our Histoy</h1>
-								<p className="mt-4"> Asia</p>
-								<p className="mt-4"> Europe</p>
-								<p className="mt-4"> Africa</p>
-								<p className="mt-4"> America</p>
+								<h1>Support</h1>
+								<p className="mt-4">EMI Charge</p>
+								<p className="mt-4">Term & Conditions</p>
+								<p className="mt-4">Shipping</p>
+
 							</div>
 						</div>
 						<div className="col-md-3">
 							<div className="fourth-part mt-4">
 								<h1>Contact Us</h1>
-								<small className="mt-5">88 Downtown NY</small>
+								<small className="mt-5">100 Alberta Downtown</small>
 								<br />
-								<small className="mt-3">Phone: (08) 5527 854</small>
+								<small className="mt-3">Phone: (08) 8827 475</small>
 								<br />
-								<small className="mt-3">phone: 08) 0545 65 454</small>
+								<small className="mt-3">phone: (08) 1472  44854</small>
 								<br />
-								<small className="mt-3">Mail: metatravels@gmail.com</small>
+								<small className="mt-3">Mail: johnscamera@gmail.com</small>
 							</div>
 						</div>
 					</div>
 					<hr />
 					<div className="button text-center">
-						<small>© 2021 Meta Travels : All Rights Reserved.</small>
+						<small>© 2021 Johns Camera : All Rights Reserved.</small>
 					</div>
 				</div>
 			</div>

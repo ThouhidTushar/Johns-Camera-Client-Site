@@ -49,6 +49,9 @@ function App() {
 						<Route path="/review">
 							<Review></Review>
 						</Route>
+						<Route path="/aboutUs">
+							<AboutUs></AboutUs>
+						</Route>
 						<Route path="/productDetails/:id">
 							<ProductDetails></ProductDetails>
 						</Route>
